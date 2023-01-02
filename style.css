@@ -5,9 +5,17 @@ body {
     background-color: cadetblue;
 }
 
-.size, .clear {
+.size-container, .clear {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 20px;
-    border-radius: 8px;
+    border-radius: 4px;
+    background-color: red;
+    color: white;
+    border: 0px;
+    font-family: Verdana, sans-serif;
+    padding: 10px;
 }
 
 .canvas-container {
@@ -59,7 +67,7 @@ body {
 }
 
 .selected {
-    border-color: blue;
+    border-color:aqua;
 }
 
 .rainbow {

@@ -28,8 +28,8 @@ function createGrid (size) {
         }));
 }
 
-const sizeButton = document.querySelector('.size');
-sizeButton.addEventListener('click', setSize);
+const sizeInput = document.querySelector('#size');
+sizeInput.addEventListener('input', () => createGrid(sizeInput.value));
 
 blackPaint.addEventListener('click', function (e) {
     color = 'black';
@@ -46,16 +46,6 @@ rainbowPaint.addEventListener('click', function (e) {
 
 const clearButton = document.querySelector('.clear');
 clearButton.addEventListener('click', clearCanvas);
-
-
-function setSize(e) {
-    let size = 101;
-
-    while (size > 100) {
-        size = prompt("How large should the grid be? Max is 100!");
-    }
-    createGrid(size);
-}
 
 function clearCanvas() {
     const tiles = document.querySelectorAll('.tile');
