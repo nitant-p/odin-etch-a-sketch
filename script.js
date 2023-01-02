@@ -1,9 +1,10 @@
 let color = 'black';
 const blackPaint = document.querySelector('.black');
 blackPaint.classList.add('selected');
+createGrid(10);
 
 function createGrid (size) {
-    clearCanvas()
+    deleteCanvas();
     const canvas = document.querySelector('.canvas');
     let tileDimension = canvas.clientHeight / size;
     for (let i = 0; i < size; i++) {
@@ -57,6 +58,11 @@ function setSize(e) {
 }
 
 function clearCanvas() {
+    const tiles = document.querySelectorAll('.tile');
+    tiles.forEach(tile => tile.style.backgroundColor = 'white');
+}
+
+function deleteCanvas() {
     const canvas = document.querySelector('.canvas');
     while (canvas.firstChild) {
         canvas.removeChild(canvas.firstChild);
