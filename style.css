@@ -18,6 +18,10 @@ body {
     padding: 10px;
 }
 
+.clear, .black, .rainbow {
+    cursor:pointer;
+}
+
 .canvas-container {
     display: flex;
     justify-content: center;
