@@ -3,7 +3,7 @@ const blackPaint = document.querySelector('.black');
 blackPaint.classList.add('selected');
 createGrid(10);
 
-function createGrid (size) {
+function createGrid(size) {
     deleteCanvas();
     const canvas = document.querySelector('.canvas');
     let tileDimension = canvas.clientHeight / size;
@@ -65,6 +65,8 @@ function colorTile(e, color) {
     } else if (color == "rainbow") {
         e.target.style.backgroundColor = randomColor();
     }
+
+    showGrid();
 }
 
 function randomColor() {
