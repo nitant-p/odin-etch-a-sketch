@@ -65,8 +65,6 @@ function colorTile(e, color) {
     } else if (color == "rainbow") {
         e.target.style.backgroundColor = randomColor();
     }
-
-    showGrid();
 }
 
 function randomColor() {
